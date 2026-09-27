@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Uses of jQuery</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="https://code.jquery.com/jquery-3.7.1.min.js"><\/script>');
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.21.0/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.21.0/dist/additional-methods.min.js"></script>
+</head>
+
+<body>
+    <h1>Common Uses of jQuery</h1>
+
+    <p id="summary">
+        jQuery is a JavaScript library that makes it easier to add interactive
+        features to webpages. It can be used to change HTML elements and CSS,
+        respond to events such as clicks, create effects and animations, and
+        simplify form validation. jQuery can also make JavaScript code shorter
+        and easier to work with.
+    </p>
+<form id="contactForm">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+
+    <div>
+        <label for="message">Message:</label>
+        <input type="text" id="message" name="message" required>
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+<script>
+    $(document).ready(function() {
+        $("#summary").css("color", "blue");
+        $("#contactForm").validate();
+    });
+</script>
+</body>
+</html>
